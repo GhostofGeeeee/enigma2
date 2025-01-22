@@ -43,9 +43,12 @@ class VolumeControl:
 			self.volumeDialog.setAnimationMode(0)
 			self.hideTimer = eTimer()
 			self.hideTimer.callback.append(self.hideVolume)
+			from Screens.InfoBar import InfoBar
+			InfoBar.instance.connectShowHideNotifier(self.showMuteForInfobar)
 			if config.volumeControl.mute.value:
 				self.dvbVolumeControl.volumeMute()
-				self.muteDialog.show()
+				self.showMuteForInfobar(True)
+			self.isShownMuteForInfobar = self.dvbVolumeControl.isMuted()
 			volume = config.volumeControl.volume.value
 			self.volumeDialog.setValue(volume)
 			self.dvbVolumeControl.setVolume(volume, volume)
@@ -97,10 +100,14 @@ class VolumeControl:
 		config.volumeControl.volume.setValue(self.dvbVolumeControl.getVolume())
 		config.volumeControl.save()
 
-	def showMute(self):  # This method is only called by InfoBarGenerics.py:
+	def showMuteForInfobar(self, state):
 		if self.dvbVolumeControl.isMuted():
-			self.muteDialog.show()
-			self.hideTimer.start(config.volumeControl.hideTimer.value * 1000, True)
+			if state:
+				self.muteDialog.show()
+				self.hideTimer.start(config.volumeControl.hideTimer.value * 1000, True)
+			elif not state and self.isShownMuteForInfobar:
+				self.muteDialog.hide()
+			self.isShownMuteForInfobar = state
 
 	# These methods are provided for compatibly with shared plugins.
 	#
