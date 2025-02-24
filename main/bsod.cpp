@@ -148,13 +148,9 @@ void bsodFatal(const char *component)
 	const char* logp2 = NULL;
 	unsigned int logs2 = 0;
 	retrieveLogBuffer(&logp1, &logs1, &logp2, &logs2);
-	/* We need a copy to clearRingBuffer */
-	char logb1[logs1+1];
-	char logb2[logs2+1];
-	memcpy(logb1, logp1, logs1);
-	memcpy(logb2, logp2, logs2);
-	logp1 = logb1;
-	logp2 = logb2;
+	/* Declare temp ringbuffer duplicate */
+	char logd1[logs1+1];
+	char logd2[logs2+1];
 
 	FILE *f;
 	std::string crashlog_name;
@@ -243,13 +239,17 @@ void bsodFatal(const char *component)
 		if (logp2)
 			fwrite(logp2, 1, logs2, f);
 
+		/* Use temp ringbuffer duplicate to clearRingBuffer */
+		memcpy(logd1, logp1, logs1);
+		memcpy(logd2, logp2, logs2);
+		logp1 = logd1;
+		logp2 = logd2;
+		clearRingBuffer();
+
 		/* dump the kernel log */
 		getKlog(f);
 		fsync(fileno(f));
 		fclose(f);
-
-		/* clear the ringbuffer */
-		clearRingBuffer();
 	}
 
 	if (bsodpython && bsodcnt == 1 && !bsodhide) //write always the first crashlog
