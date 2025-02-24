@@ -133,7 +133,7 @@ void retrieveLogBuffer(const char **p1, unsigned int *s1, const char **p2, unsig
 
 void clearRingBuffer()
 {
-	std::memset(ringbuffer, 0, RINGBUFFER_SIZE);
+	memset(ringbuffer, 0, RINGBUFFER_SIZE);
 	ringbuffer_head = 0;
 }
 
