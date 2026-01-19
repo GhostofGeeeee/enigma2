@@ -1434,7 +1434,7 @@ class RecordTimerEntry(TimerEntry):
 			# Okay, the recording has been stopped. We need to properly note that in our
 			# state, with also keeping the possibility to re-try.
 			# DEBUG: This has to be done!
-		elif event == iRecordableService.evStart:
+		elif event == iRecordableService.evStart and not hasattr(self, "isInstantRecord"):
 			if self.pvrConvert:
 				return
 			text = _("A recording has been started:\n%s") % self.name
