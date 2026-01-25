@@ -143,7 +143,8 @@ class RecordTimer(Timer):
 			timerEntry.append(f"eventBegin=\"{timer.eventBegin}\"")
 			timerEntry.append(f"eventEnd=\"{timer.eventEnd}\"")
 			timerEntry.append(f"marginAfter=\"{timer.marginAfter}\"")
-			timerEntry.append(f"hasEndTime=\"{timer.hasEndTime}\"")
+			if timer.justplay:
+				timerEntry.append(f"hasEndTime=\"{timer.hasEndTime}\"")
 			timerEntry.append(f"serviceref=\"{stringToXML(str(timer.service_ref))}\"")
 			if timer.eit:
 				timerEntry.append(f"eit=\"{timer.eit}\"")
@@ -220,7 +221,7 @@ class RecordTimer(Timer):
 			eventBegin = begin + marginBefore
 		if eventEnd == 0:
 			eventEnd = end - marginAfter
-		hasEndTime = timerDom.get("hasEndTime", "true").lower() in ("1", "true", "yes")
+		hasEndTime = timerDom.get("hasEndTime", str(config.recording.zap_has_endtime.value)).lower() in ("1", "true", "yes")
 		serviceRef = ServiceReference(timerDom.get("serviceref"))
 		eit = timerDom.get("eit") or "None"
 		eit = int(eit) if eit != "None" else None
@@ -638,7 +639,7 @@ class RecordTimerEntry(TimerEntry):
 			self.begin = int(time())
 		if self.end < self.begin:
 			self.end = self.begin
-		self.hasEndTime = not justplay
+		self.hasEndTime = config.recording.zap_has_endtime.value
 		if not isinstance(serviceref, ServiceReference):  # NOTE: Rename "serviceref" and "service_ref" to "serviceRef".
 			raise AssertionError("[RecordTimerEntry] Error: Invalid service reference!")
 		self.service_ref = serviceref if serviceref and serviceref.isRecordable() else ServiceReference(None)
