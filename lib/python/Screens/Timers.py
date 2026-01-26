@@ -1508,14 +1508,14 @@ class RecordTimerEdit(Setup):
 		self.timerStartTime = ConfigClock(default=self.timer.eventBegin)
 		marginChoices = [(x, ngettext("%d Minute", "%d Minutes", x) % x) for x in range(121)]
 		self.timerMarginBefore = ConfigSelection(default=self.timer.marginBefore // 60 if not self.timer.justplay else config.recording.margin_before.value, choices=marginChoices)
-		self.timerZapMarginBefore = ConfigSelection(default=self.timer.marginBefore // 60 if self.timer.justplay else config.recording.zap_margin_before.value, choices=marginChoices)
+		self.timerMarginBeforeZap = ConfigSelection(default=self.timer.marginBefore // 60 if self.timer.justplay else config.recording.zap_margin_before.value, choices=marginChoices)
 		# print("[Timers] DEBUG: default=%d, value=%d, margin=%d." % (self.timerMarginBefore.value, self.timerMarginBefore.default, self.timer.marginBefore // 60))
 		# self.timerHasEndTime = ConfigYesNo(default=self.timer.end > self.timer.begin + 3 and self.timer.justplay != 0)
 		self.timerHasEndTime = ConfigYesNo(default=self.timer.hasEndTime)
 		# self.timerEndTime = ConfigClock(default=self.timer.end)
 		self.timerEndTime = ConfigClock(default=self.timer.eventEnd)
 		self.timerMarginAfter = ConfigSelection(default=self.timer.marginAfter // 60 if not self.timer.justplay else config.recording.margin_after.value, choices=marginChoices)
-		self.timerZapMarginAfter = ConfigSelection(default=self.timer.marginAfter // 60 if self.timer.justplay else config.recording.zap_margin_after.value, choices=marginChoices)
+		self.timerMarginAfterZap = ConfigSelection(default=self.timer.marginAfter // 60 if self.timer.justplay else config.recording.zap_margin_after.value, choices=marginChoices)
 		serviceName = self.getServiceName(self.timer.service_ref)
 		self.timerService = ConfigSelection([(serviceName, serviceName)])
 		self.timerServiceReference = self.timer.service_ref
