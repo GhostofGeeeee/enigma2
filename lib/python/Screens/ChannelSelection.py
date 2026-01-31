@@ -2580,7 +2580,7 @@ class ChannelSelection(ChannelSelectionBase, ChannelSelectionEdit, ChannelSelect
 			self.showPipzapMessage()
 			self.dopipzap = True
 			self.__evServiceStart()
-			# Move to service playing in pip (will not work with sub-services).
+			# Move to service playing in pip.
 			self.setCurrentSelection(self.session.pip.getCurrentService())
 			title = f"{title} {_('(PiP)')}"
 		self.setTitle(title)
@@ -2761,7 +2761,7 @@ class ChannelSelection(ChannelSelectionBase, ChannelSelectionEdit, ChannelSelect
 			pos += 1
 		self.delhistpoint = pos + 1
 		if pos < hlen and pos != self.history_pos:
-			tmp = self.history[pos]  # noqa F841
+			# tmp = self.history[pos]
 			# self.history.append(tmp)
 			# del self.history[pos]
 			self.history_pos = pos
@@ -2859,7 +2859,6 @@ class ChannelSelection(ChannelSelectionBase, ChannelSelectionEdit, ChannelSelect
 		if self.revertMode is None:
 			self.restoreRoot()
 			if self.dopipzap:
-				# This unfortunately won't work with sub-services.
 				self.setCurrentSelection(self.session.pip.getCurrentService())
 			else:
 				lastservice = eServiceReference(self.lastservice.value)
@@ -2890,7 +2889,6 @@ class ChannelSelection(ChannelSelectionBase, ChannelSelectionEdit, ChannelSelect
 		self.startServiceRef = None
 		self.startRoot = None
 		if self.dopipzap:
-			# This unfortunately won't work with sub-services.
 			self.setCurrentSelection(self.session.pip.getCurrentService())
 		else:
 			lastservice = eServiceReference(self.lastservice.value)
