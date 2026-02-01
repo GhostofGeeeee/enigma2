@@ -2667,28 +2667,30 @@ class ChannelSelection(ChannelSelectionBase, ChannelSelectionEdit, ChannelSelect
 		return ret
 
 	def addToHistory(self, ref):
-		if not self.isSubservices() or not self.history:
-			if self.delhistpoint is not None:
-				x = self.delhistpoint
-				while x <= len(self.history) - 1:
+		if self.history and self.isSubservices(self.history[self.history_pos][0]) and self.isSubservices(self.servicePath[0]):  # Only replace subservice
+			self.history[self.history_pos] = self.servicePath[:] + [ref]
+			return
+		if self.delhistpoint is not None:
+			x = self.delhistpoint
+			while x <= len(self.history) - 1:
+				del self.history[x]
+		self.delhistpoint = None
+		if self.servicePath is not None:
+			tmp = self.servicePath[:]
+			tmp.append(ref)
+			self.history.append(tmp)
+			hlen = len(self.history)
+			x = 0
+			while x < hlen - 1:
+				if self.history[x][-1] == ref and not self.isSubservices() or self.isSubservices(self.history[x][0]):
 					del self.history[x]
-			self.delhistpoint = None
-			if self.servicePath is not None:
-				tmp = self.servicePath[:]
-				tmp.append(ref)
-				self.history.append(tmp)
-				hlen = len(self.history)
-				x = 0
-				while x < hlen - 1:
-					if self.history[x][-1] == ref:
-						del self.history[x]
-						hlen -= 1
-					else:
-						x += 1
-				if hlen > HISTORY_SIZE:
-					del self.history[0]
 					hlen -= 1
-				self.history_pos = hlen - 1
+				else:
+					x += 1
+			if hlen > HISTORY_SIZE:
+				del self.history[0]
+				hlen -= 1
+			self.history_pos = hlen - 1
 
 	def historyBack(self):
 		hlen = len(self.history)
@@ -2711,8 +2713,11 @@ class ChannelSelection(ChannelSelectionBase, ChannelSelectionEdit, ChannelSelect
 	def setHistoryPath(self, doZap=True):
 		path = self.history[self.history_pos][:]
 		ref = path.pop()
-		del self.servicePath[:]
-		self.servicePath += path
+		if self.isSubservices(path[0]):
+			self.enterSubservices(ref)
+		else:
+			del self.servicePath[:]
+			self.servicePath += path
 		self.saveRoot()
 		root = path[-1]
 		cur_root = self.getRoot()
@@ -2834,7 +2839,11 @@ class ChannelSelection(ChannelSelectionBase, ChannelSelectionEdit, ChannelSelect
 			self.addToHistory(currentPlayedRef)
 			hlen = len(self.history)
 		if hlen > 1:
-			if self.history_pos == hlen - 1:
+			if self.isSubservices(self.history[self.history_pos][0]):  # Exit subservice!
+				del self.history[self.history_pos]
+				if self.history_pos > 0:
+					self.history_pos -= 1
+			elif self.history_pos == hlen - 1:
 				tmp = self.history[self.history_pos]
 				self.history[self.history_pos] = self.history[self.history_pos - 1]
 				self.history[self.history_pos - 1] = tmp
