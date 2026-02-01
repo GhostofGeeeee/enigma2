@@ -416,6 +416,8 @@ class ChannelSelectionBase(Screen):
 		if self.bouquet_root:
 			self.enterPath(self.bouquet_root)
 		self.enterPath(root)
+		if self.isSubservices(root):
+			self.enterSubservices()
 		self.startRoot = None
 		if save_root:
 			self.saveRoot()
