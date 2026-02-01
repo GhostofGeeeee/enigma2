@@ -2761,7 +2761,7 @@ class ChannelSelection(ChannelSelectionBase, ChannelSelectionEdit, ChannelSelect
 			pos += 1
 		self.delhistpoint = pos + 1
 		if pos < hlen and pos != self.history_pos:
-			tmp = self.history[pos]  # noqa F841
+			# tmp = self.history[pos]
 			# self.history.append(tmp)
 			# del self.history[pos]
 			self.history_pos = pos
