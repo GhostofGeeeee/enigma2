@@ -884,10 +884,10 @@ self.autoResize()
 		<widget name="key_blue" position="420,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#18188b" transparent="1" />
 		<widget name="timeline_text" position="0,41" size="560,20" />
 		<widget name="list" position="0,65" size="560,270" EntryBorderColor="#071930" EntryBackgroundColor="#2f4964" EntryBackgroundColorSelected="#25688caf" scrollbarMode="showOnDemand" />
-		<eLabel position="0,41" size="560,1" backgroundColor="#2f4964" zPosition="1" />                                                                                                   
-		<eLabel position="0,65" size="560,2" backgroundColor="#2f4964" zPosition="1" />                                                                                                   
-		<eLabel position="0,335" size="560,2" backgroundColor="#2f4964" zPosition="1" />                                                                                                  
-		<eLabel position="530,65" size="1,270" backgroundColor="#2f4964" zPosition="1" />                                                                                                 
+		<eLabel position="0,41" size="560,1" backgroundColor="#2f4964" zPosition="1" />
+		<eLabel position="0,65" size="560,2" backgroundColor="#2f4964" zPosition="1" />
+		<eLabel position="0,335" size="560,2" backgroundColor="#2f4964" zPosition="1" />
+		<eLabel position="530,65" size="1,270" backgroundColor="#2f4964" zPosition="1" />
 		<widget name="timeline0" position="0,65" zPosition="1" size="1,270" pixmap="skin_default/timeline.png" />
 		<widget name="timeline1" position="0,65" zPosition="1" size="1,270" pixmap="skin_default/timeline.png" />
 		<widget name="timeline2" position="0,65" zPosition="1" size="1,270" pixmap="skin_default/timeline.png" />
