@@ -51,8 +51,8 @@ if [[ "$OSTYPE" == "darwin"* ]]
 	then
 		# Mac OSX
 		printf "Script running on Mac OSX [%s]\n" "$OSTYPE"
-    	findoptions=" -s -X "
-        localgsed="gsed"
+		findoptions=" -s -X "
+		localgsed="gsed"
 fi
 
 #
