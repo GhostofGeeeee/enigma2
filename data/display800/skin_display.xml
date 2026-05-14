@@ -15,7 +15,7 @@
 		<color color="#000000" name="WindowTitleBackground"/>
 	</windowstyle>
 	
-	<fonts>   
+	<fonts>
 		<font filename="nmsbd.ttf" name="FdLcD" scale="100"/>
 		<font filename="verdana.ttf" name="FdLcDLight" scale="100"/>
 	</fonts>
@@ -34,7 +34,7 @@
 	<!-- MAIN -->
 	
 	<!-- CHANNEL SELECTION-->
-	<screen name="ChannelSelectionSummary" position="0,0" size="800,480"> 
+	<screen name="ChannelSelectionSummary" position="0,0" size="800,480">
 		<panel name="LCDChannelSelectionChannelName" />
 		<panel name="LCDChannelSelectionProgramName" />
 		<panel name="LCDChannelSelectionProgress" />
@@ -72,7 +72,7 @@
 	</screen>
 	
 	<!-- INFOBAR -->
-	<screen name="InfoBarSummary" position="0,0" size="800,480"> 
+	<screen name="InfoBarSummary" position="0,0" size="800,480">
 		<panel name="LCDInfoBarChannelName" />
 		<panel name="LCDInfoBarProgramName" />
 		<panel name="LCDInfoBarProgress" />
@@ -84,7 +84,7 @@
 	</screen>
 	
 	<!-- STANDBY -->
-	<screen name="StandbySummary" position="0,0" size="800,480"> 
+	<screen name="StandbySummary" position="0,0" size="800,480">
 		<widget source="global.CurrentTime" render="Label" position="40,70" size="720,180" font="FdLcD;100" foregroundColor="yellow" halign="center" valign="center" zPosition="10">
 			<convert type="ClockToText">Mixed</convert>
 		</widget>

@@ -74,7 +74,7 @@
 	</screen>
 
 <!-- movieplayer-->
-	<screen name="InfoBarMoviePlayerSummary" position="0,0" size="240,80"> 
+	<screen name="InfoBarMoviePlayerSummary" position="0,0" size="240,80">
 		<widget source="session.CurrentService" render="Label" position="0,0" size="240,35" foregroundColor="#FFFF00" font="FdLcD;24" valign="center" halign="center" zPosition="14">
 			<convert type="ServiceName">Name</convert>
 		</widget>
@@ -90,7 +90,7 @@
 		<widget source="parent.Title" render="Label" position="0,0" foregroundColor="#FFFF00" size="240,35" font="FdLcD;24" halign="center" valign="center" />
 		<widget source="selected" render="Label" position="0,40" size="240,35" font="FdLcD;21" halign="center" valign="top" foregroundColor="#02c6ff" />
 	</screen>
-	<screen name="MovieSelectionSummary" position="0,0" size="240,80"> 
+	<screen name="MovieSelectionSummary" position="0,0" size="240,80">
 		<widget source="parent.Title" render="Label" position="0,0" size="240,35" foregroundColor="#FFFF00" font="FdLcD;24" halign="center" zPosition="14" />
 		<widget source="name" render="Label" position="0,35" foregroundColor="#02c6ff" size="240,25" font="FdLcD;24" halign="center" valign="center" />
 		<widget source="Service" render="Label" position="0,60" size="105,20" font="FdLcD;24" halign="center" transparent="1" foregroundColor="#02c6ff" >
@@ -100,7 +100,7 @@
 		<widget source="parent.Service" render="Label" position="110,27" size="105,25" font="FdLcD;24" halign="right" transparent="1" foregroundColor="#02c6ff" >
 			<convert type="MovieInfo">FileSize</convert>
 		</widget>
-    </screen>
+	</screen>
 
 <!-- channelselection-->
 	<screen name="ChannelSelectionSummary" position="fill">
@@ -123,7 +123,7 @@
 	</screen>
 
 <!-- setup-->
-	<screen name="SetupSummary" position="0,0" size="240,80"> 
+	<screen name="SetupSummary" position="0,0" size="240,80">
 		<widget source="Title" render="Label" position="0,0" foregroundColor="#FFFF00" size="240,25" font="FdLcD;24" halign="center" valign="center" />
 		<widget source="entry" render="Label" position="0,26" size="240,25" font="FdLcD;24" halign="center" valign="center" />
 		<widget source="value" render="Label" position="0,55" size="240,25" font="FdLcD;22" halign="center" valign="top" />
@@ -143,7 +143,7 @@
 
 <!-- standby-->
 	<screen name="StandbySummary" position="0,0" size="240,80">
-		<widget source="global.CurrentTime" render="Label" position="25,0" size="240,24" font="FdLcD;22" halign="left"  noWrap="1">
+		<widget source="global.CurrentTime" render="Label" position="25,0" size="240,24" font="FdLcD;22" halign="left" noWrap="1">
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
 		<eLabel position="0,26" size="132,5" halign="left" noWrap="1" borderWidth="3" backgroundColor="#ffffff"/>					
@@ -162,9 +162,9 @@
 			<convert type="ConditionalShowHide" />
 		</widget>
 	</screen>
- 		
-<!-- Numberzap -->    
- 	<screen name="NumberZapSummary" position="0,0" size="240,80">
+		
+<!-- Numberzap -->
+	<screen name="NumberZapSummary" position="0,0" size="240,80">
 		<widget source="parent.service_summary" render="Label" position="0,0" size="240,30" foregroundColor="#FFFF00" font="FdLcD;30" halign="center" valign="top" />
 		<widget source="parent.number_summary" render="Label" position="0,30" size="240,45" font="FdLcD;40" halign="center" valign="center" />
 		<panel name="SummaryClockPanel" />
@@ -212,13 +212,13 @@
 		<widget source="Title" render="Label" position="0,0" size="240,30" font="FdLcD;26" halign="center" valign="center" foregroundColor="#FFFF00" />
 		<widget name="scan_progress" position="0,30" size="240,12" foregroundColor="#02c6ff" borderWidth="2" />
 		<panel name="SummaryClockPanel" />
-	</screen> 
+	</screen>
 
 <!-- EPG -->
 	<screen name="EPGExtensionsListSummary" position="0,0" size="240,80">
 		<widget source="parent.Title" render="Label" position="0,0" size="240,30" font="FdLcD;20" halign="center" valign="center" foregroundColor="#FFFF00" />
 		<panel name="SummaryClockPanel" />
-	</screen> 
+	</screen>
 	<screen name="GraphicalEPGPIGSummary" position="0,0" size="240,80">
 		<eLabel text="Graphical EPG" position="0,0" foregroundColor="#FFFF00" size="240,24" font="FdLcD;16" halign="center" valign="center" noWrap="1" />
 		<widget source="parent.Service" render="Label" position="0,25" size="240,25" font="FdLcD;19" halign="center" valign="center" zPosition="14">
@@ -286,7 +286,7 @@
 
 <!-- DVD -->
 	<screen name="DVDSummary" position="fill">
-		<widget source="session.CurrentService" render="Label" position="top" size="*,28" font="FdLcD;12"  >
+		<widget source="session.CurrentService" render="Label" position="top" size="*,28" font="FdLcD;12" >
 			<convert type="ServiceName">Name</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Progress" position="top" size="*,4" borderWidth="1" >
@@ -301,7 +301,7 @@
 	</screen>
 	
 <!-- EMC-->
-	<screen name="EMCSelectionSummary" position="0,0" size="240,80"> 
+	<screen name="EMCSelectionSummary" position="0,0" size="240,80">
 		<widget source="parent.Service" render="Label" position="0,0" size="240,25" foregroundColor="#FFFF00" font="FdLcD;24" halign="center" valign="center" >
 			<convert type="ServiceName">NameOnly</convert>
 		</widget>
@@ -313,7 +313,7 @@
 			<convert type="MovieInfo">FileSize</convert>
 		</widget>
 	</screen>
-	<screen name="EMCMoviePlayerSummary" position="0,0" size="240,80"> 
+	<screen name="EMCMoviePlayerSummary" position="0,0" size="240,80">
 		<widget source="session.CurrentService" render="Label" position="0,0" size="240,40" foregroundColor="#FFFF00" font="FdLcD;26" valign="top" halign="center" >
 			<convert type="ServiceName">Name</convert>
 		</widget>
@@ -343,7 +343,7 @@
 <!-- Quickmenü -->
 	<screen name="QuickMenuSummary" position="0,0" size="240,80">
 		<widget source="parent.Title" render="Label" position="0,0" foregroundColor="#FFFF00" size="240,40" font="FdLcD;35" halign="center" valign="top" />
-		<widget source="parent.summary_description" render="Label" position="0,40" size="240,40" font="FdLcD;30" halign="center" valign="center"  />
+		<widget source="parent.summary_description" render="Label" position="0,40" size="240,40" font="FdLcD;30" halign="center" valign="center" />
 	</screen>
 	
 <!-- softwaremanagment -->

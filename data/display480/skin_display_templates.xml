@@ -374,7 +374,7 @@
 	<!-- ChoiceBox - Question "Stop Movie" or so and then choices 1, 2, 3, 4 and so on - NOT GOOD implented -->
 	<screen name="ChoiceBoxSummary" position="0,0" size="480,320">
 		<widget source="parent.summary_list" render="Label" position="10,10" size="470,300" font="FdLcD;29"/>
- 	</screen>
+	</screen>
 
 	<!-- MessageBox - Message like "Continue Playing at xx:xx:xx" -->
 	<screen name="MessageBoxSummary" position="0,0" size="480,320">

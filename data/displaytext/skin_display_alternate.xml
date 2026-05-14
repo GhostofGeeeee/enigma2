@@ -127,7 +127,7 @@
 	</screen>
 	<screen name="MessageBoxSummary" position="0,0" size="132,64">
 		<widget source="text" render="Label" position="0,0" size="132,52" font="Regular;11" valign="center" />
-		<widget source="option" render="Label" position="0,50" size="120,14" halign="left" noWrap="1"  />
+		<widget source="option" render="Label" position="0,50" size="120,14" halign="left" noWrap="1" />
 	</screen>
 	<screen name="MessageBoxSimpleSummary" position="0,0" size="132,64">
 		<panel name="MessageBoxSummary" />
@@ -196,15 +196,15 @@
 	</screen>
 <!-- Timer-Log -->
 	<screen name="TimerEntrySummary" position="0,0" size="132,64">
-		<widget source="parent.summary_description" render="Label" position="fill" size="120,20" font="Regular;18" />       
+		<widget source="parent.summary_description" render="Label" position="fill" size="120,20" font="Regular;18" />
 	</screen>
 <!-- Timer -->
 	<screen name="TimerOverviewSummary" position="0,0" size="132,64">
-		<widget source="name" render="Label" position="fill" size="120,20" font="Regular;18" />       
+		<widget source="name" render="Label" position="fill" size="120,20" font="Regular;18" />
 	</screen>
 <!-- AutoTimer -->
 	<screen name="AutoTimerOverviewSummary" position="0,0" size="132,64">
-		<widget source="entry" render="Label" position="fill" size="120,20" font="Regular;18" />       
+		<widget source="entry" render="Label" position="fill" size="120,20" font="Regular;18" />
 	</screen>
 <!-- AudioSelection -->
 	<screen name="AudioSelectionSummary" position="0,0" size="132,64">
@@ -223,16 +223,16 @@
 		<widget source="entry" render="Label" position="fill" size="120,20" font="Regular;18" />
 	</screen>
 	<screen name="CrossEPG_MenuSummary" position="0,0" size="132,64">
-		<widget source="SetupEntry" render="Label" position="0,0" size="120,20" font="Regular;18" halign="left" noWrap="1"  />
+		<widget source="SetupEntry" render="Label" position="0,0" size="120,20" font="Regular;18" halign="left" noWrap="1" />
 	</screen>
 	<screen name="CrossEPG_DownloaderSummary" position="0,0" size="132,64">
 		<widget source="parent.Title" render="Label" position="0,0" size="120,20" font="Regular;18" halign="left" noWrap="1" />
 	</screen>
 	<screen name="AutoBouquetsMaker_MenuSummary" position="0,0" size="132,64">
-		<widget source="SetupEntry" render="Label" position="0,0" size="120,20" font="Regular;18" halign="left" noWrap="1"  />
+		<widget source="SetupEntry" render="Label" position="0,0" size="120,20" font="Regular;18" halign="left" noWrap="1" />
 	</screen>
 <!-- Shoutcast -->
 	<screen name="SHOUTcastLCDScreen" size="132,64">
-		<widget name="text2" position="0,0" size="120,20" font="Regular;18" halign="left" noWrap="1"  />
+		<widget name="text2" position="0,0" size="120,20" font="Regular;18" halign="left" noWrap="1" />
 	</screen>
 </skin>
