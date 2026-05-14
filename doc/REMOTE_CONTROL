@@ -91,7 +91,7 @@ Beyonwiz T series power/standby remote control codes
 
 Remote name in Beyonwiz setup   Vendor  POWER POWER2 WAKEUP SUSPEND
                                 Prefix
-			       
+
 Beyonwiz T3 (0xABCD)            0xABCD   0x0A   0xFC   0xFB    0xFA
 Beyonwiz T3 alternate (0xAE97)  0xAE97   0x0A   0xFC   0xFB    0xFA
 Beyonwiz (0x02F2)               0x02F2   0x3C   0xFC   0xFB    0xFA

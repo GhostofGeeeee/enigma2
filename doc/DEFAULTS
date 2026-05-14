@@ -100,9 +100,9 @@ So this would only install the lamedb.192 file, if you have a DVB-S NIM in your 
 - Default satlists are stored either in the "image default"-directory or in the "preset partition" directory. The satlists must contain a
   <tag> tag in the global <prerequisites> tag:
   <prerequisites>
-    <tag type="services" />
+  	<tag type="services" />
   	<bcastsystem type="DVB-S" />
-    <satellite type="192" />
+  	<satellite type="192" />
   </prerequisites>
   Only if this tag is present, the user get's this default presented in the default satlist selection (and nowhere else!).
   
