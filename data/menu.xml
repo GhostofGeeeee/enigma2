@@ -70,12 +70,12 @@
 			</menu>
 			<!-- Menu / Setup / GUI (Was: Menu / Settings / System) -->
 			<menu key="system" level="0" text="Usage &amp; GUI" weight="15">
-				<!-- Menu / Setup / GUI / Display-->
+				<!-- Menu / Setup / GUI / Display -->
 				<item key="user_interface" level="0" text="OSD Settings" weight="0"><setup setupKey="UserInterface" /></item>
 				<item key="remote_setup" level="0" text="Remote Control Button Settings" weight="5"><setup setupKey="RemoteButton" /></item>
 				<item key="channelselection_setup" level="0" text="Channel Selection Settings" weight="10"><setup setupKey="ChannelSelection" /></item>
 				<item key="usage_setup" level="0" text="Customize System Settings" weight="15"><setup setupKey="Usage" /></item>
-				<!--item key="specialfeatures_menu" level="0" text="Special Features Settings" weight="20"><setup setupKey="SpecialFeatures" /></item-->
+				<!-- <item key="specialfeatures_menu" level="0" text="Special Features Settings" weight="20"><setup setupKey="SpecialFeatures" /></item> -->
 				<item key="skin_setup" level="0" text="Skin Settings" weight="25"><screen module="SkinSelection" screen="SkinSelection" /></item>
 				<item key="picon_setup" level="0" text="Picon Settings" weight="26"><screen module="Picon" screen="PiconSettings" /></item>
 				<item key="display_setup" level="0" text="Display Settings" weight="30" requires="DisplaySetup"><setup setupKey="Display" /></item>
@@ -234,7 +234,7 @@ else:
 			<item key="multiboot" level="0" text="MultiBoot Manager" weight="6" requires="canMultiBoot"><screen module="MultiBootManager" screen="MultiBootManager" /></item>
 			<item key="kexec_multiboot" level="2" text="Enable Kexec MultiBoot" weight="6" requires="cankexec"><screen module="MultiBootManager" screen="KexecInit">1</screen></item>
 			<item key="chkroot_multiboot" level="2" text="Enable Chkroot MultiBoot" weight="6" requires="canchkroot"><screen module="MultiBootManager" screen="ChkrootInit">1</screen></item>
-			<!--item key="SDswap" level="0" text="SDroot" weight="7" requires="HasSDswap"><screen module="SDswap" screen="SDswap">1</screen></item-->
+			<!-- <item key="SDswap" level="0" text="SDroot" weight="7" requires="HasSDswap"><screen module="SDswap" screen="SDswap">1</screen></item> -->
 			<item key="wol_standby" level="0" text="WOL Standby" weight="10" requires="GBWOL">
 				<code>
 from Screens.MessageBox import MessageBox

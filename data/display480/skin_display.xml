@@ -16,7 +16,7 @@
 		<color color="#000000" name="WindowTitleBackground"/>
 	</windowstyle>
 	<fonts>
-		<!-- pick a funky name for the font, so we don't conflict  -->
+		<!-- pick a funky name for the font, so we don't conflict -->
 		<font filename="nmsbd.ttf" name="FdLcD" scale="100"/>
 	</fonts>
 
@@ -71,7 +71,7 @@
 		<!-- Get blinking (or permanently displayed) "R" centered on progressbar at recordings -->
 		<panel name="TheRecordingPanel"/>
 
-		<!-- Get current time at bottom right  -->
+		<!-- Get current time at bottom right -->
 		<panel name="SummaryClockPanel"/>
 	</screen>
 
@@ -130,7 +130,7 @@
 		</widget>
 	</screen>
 
-	<!-- ChannelSelection  -->
+	<!-- ChannelSelection -->
 	<screen name="ChannelSelectionSummary" position="0,0" size="480,320">
 		<widget source="parent.ServiceEvent" render="Label" position="0,8" size="480,63" font="FdLcD;55" halign="center" foregroundColor="#87CEFA">
 			<convert type="ServiceName">Name</convert>
@@ -160,7 +160,7 @@
 		<!-- Get blinking (or permanently displayed) "R" centered on progressbar at recordings -->
 		<panel name="TheRecordingPanel"/>
 
-		<!-- Get current time at bottom right  -->
+		<!-- Get current time at bottom right -->
 		<panel name="SummaryClockPanel"/>
 	</screen>
 

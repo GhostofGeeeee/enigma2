@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--  Skin: LCD from Magic by MiLo, XmlUnboundNsPrefix -->
+<!--  Skin: LCD from Magic by MiLo -->
 <!--suppress XmlUnboundNsPrefix, XmlUnboundNsPrefix -->
 <skin>
 	<!-- Display skin: displaytext / Default / OpenATV -->
@@ -18,11 +18,11 @@
 		<color color="#000000" name="WindowTitleBackground"/>
 	</windowstyle>
 	<fonts>
-		<!-- pick a funky name for the font, so we don't conflict  -->
+		<!-- pick a funky name for the font, so we don't conflict -->
 		<font filename="nmsbd.ttf" name="FdLcD" scale="100"/>
 	</fonts>
 
-<!-- main-->
+<!-- main -->
 	<screen name="InfoBarSummary" position="0,0" size="132,64">
 		<widget source="session.CurrentService" render="Label" position="0,0" size="120,25" halign="left" noWrap="1" >
 			<convert type="ServiceName">NameOnly</convert>
@@ -45,7 +45,7 @@
 		</widget>
 	</screen>
 
-<!-- channelselection-->
+<!-- channelselection -->
 	<screen name="ChannelSelectionSummary" position="0,0" size="132,64">
 		<widget source="parent.ServiceEvent" render="Label" position="0,0" size="120,25" halign="left" noWrap="1" >
 			<convert type="ServiceName">Name</convert>
@@ -55,12 +55,12 @@
 		<widget source="parent.number_summary" render="Label" position="0,0" size="132,64" halign="left" noWrap="1" />
 	</screen>
 
-<!-- menus-->
+<!-- menus -->
 	<screen name="MenuSummary" position="0,0" size="16,1">
 		<widget source="entry" render="RollerCharLCD" position="0,0" size="132,1" font="Regular;16" halign="left" valign="top"/>
 	</screen>
 
-<!-- movieplayer-->
+<!-- movieplayer -->
 	<screen name="MovieSelectionSummary" position="0,0" size="132,64">
 		<widget source="parent.Service" render="Label" position="0,0" size="120,25" font="Regular;14">
 			<convert type="ServiceName">Name</convert>
@@ -84,16 +84,14 @@
 		</widget>
 	</screen>
 
-<!-- setup-->
+<!-- setup -->
 	<screen name="SetupSummary" position="0,0" size="132,64">
 		<widget source="Title" render="RollerCharLCD" position="0,0" size="120,16" font="Regular;12" />
-<!--
-		<widget source="entry" render="Label" position="0,0" size="120,32" font="Regular;12" />
- -->
+		<!-- <widget source="entry" render="Label" position="0,0" size="120,32" font="Regular;12" /> -->
 		<widget source="value" render="Label" position="0,0" size="120,32" font="Regular;12" />
 	</screen>
 
-<!-- misc-->
+<!-- misc -->
 	<screen name="ScreenSummary" position="0,0" size="132,64">
 		<widget source="Title" render="RollerCharLCD" position="0,0" size="124,40" font="Regular;16" valign="center" />
 	</screen>
@@ -102,7 +100,7 @@
 	</screen>
 	<screen name="MessageBoxSummary" position="0,0" size="132,64">
 		<widget source="text" render="Label" position="0,0" size="132,52" font="Regular;11" valign="center" />
-		<widget source="option" render="Label" position="0,50" size="120,14" halign="left" noWrap="1"  />
+		<widget source="option" render="Label" position="0,50" size="120,14" halign="left" noWrap="1" />
 	</screen>
 	<screen name="MessageBoxSimpleSummary" position="0,0" size="132,64">
 		<panel name="MessageBoxSummary" />
@@ -148,7 +146,7 @@
 		<widget source="entry" render="Label" position="0,0" size="120,20" font="Regular;18" noWrap="1" />
 	</screen>
 
-<!-- EMC  -->
+<!-- EMC -->
 	<screen name="EMCSelectionSummary" position="0,0" size="132,64">
 		<widget source="parent.Service" render="Label" position="0,0" size="132,64" font="Regular;18" >
 			<convert type="ServiceName">Name</convert>
@@ -204,13 +202,13 @@
 		<widget source="entry" render="Label" position="fill" size="120,20" font="Regular;18" />
 	</screen>
 	<screen name="CrossEPG_MenuSummary" position="0,0" size="132,64">
-		<widget source="SetupEntry" render="Label" position="0,0" size="120,20" font="Regular;18" halign="left" noWrap="1"  />
+		<widget source="SetupEntry" render="Label" position="0,0" size="120,20" font="Regular;18" halign="left" noWrap="1" />
 	</screen>
 	<screen name="CrossEPG_DownloaderSummary" position="0,0" size="132,64">
 		<widget source="parent.Title" render="Label" position="0,0" size="120,20" font="Regular;18" halign="left" noWrap="1" />
 	</screen>
 	<screen name="AutoBouquetsMaker_MenuSummary" position="0,0" size="132,64">
-		<widget source="SetupEntry" render="Label" position="0,0" size="120,20" font="Regular;18" halign="left" noWrap="1"  />
+		<widget source="SetupEntry" render="Label" position="0,0" size="120,20" font="Regular;18" halign="left" noWrap="1" />
 	</screen>
 <!-- Shoutcast -->
 	<screen name="SHOUTcastLCDScreen" size="132,64">

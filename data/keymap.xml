@@ -8,7 +8,7 @@
 -->
 <keymap>
 	<!--
-		These key map actions are global to all screens.  These
+		These key map actions are global to all screens. These
 		definitions should never be defeated or changed without
 		very careful consideration.
 	-->
@@ -1303,9 +1303,9 @@
 	</map>
 
 	<map context="StandbyActions">
-		<key id="KEY_POWER" mapto="power"   flags="m" />
-		<key id="KEY_POWER" mapto="power_break"  flags="b" />
-		<key id="KEY_POWER" mapto="power_long"   flags="l" />
+		<key id="KEY_POWER" mapto="power" flags="m" />
+		<key id="KEY_POWER" mapto="power_break" flags="b" />
+		<key id="KEY_POWER" mapto="power_long" flags="l" />
 		<key id="KEY_POWER" mapto="power_repeat" flags="r" />
 		<key id="KEY_KP1" mapto="discrete_on" flags="m" />
 	</map>

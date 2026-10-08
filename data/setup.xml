@@ -669,7 +669,7 @@
 					<item level="0" text="Default gateway" description="Enter the IP address to be used as the gateway to other networks for this adapter. Typically this is the IP address of your router.">self.cfgGateway</item>
 				</if>
 			</if>
-			<item level="1" text="Network metric" description="Select the network metric for this adapter. When multiple adapters are active, the one with the lowest network metric is used as the default route for network traffic." conditional="self.hasMetric">self.cfgMetric</item> 
+			<item level="1" text="Network metric" description="Select the network metric for this adapter. When multiple adapters are active, the one with the lowest network metric is used as the default route for network traffic." conditional="self.hasMetric">self.cfgMetric</item>
 			<item level="1" text="Override DNS" description="When enabled, specify custom DNS settings for this adapter instead of using the global DNS settings.">self.cfgDNSOverride</item>
 			<if conditional="self.cfgDNSOverride.value">
 				<if conditional="self.cfgIpMode.value != 1">
@@ -1102,7 +1102,7 @@
 	</setup>
 	<setup key="Scheduler" title="Scheduler Settings">
 		<item level="0" text="Timer type" description="Select the type of this timer.">self.timerType</item>
-		<!--item level="0" text="Description" description="Enter a description for this timer.">self.timerDescription</item-->
+		<!-- <item level="0" text="Description" description="Enter a description for this timer.">self.timerDescription</item> -->
 		<if conditional="self.timerType.value in ('autostandby', 'autodeepstandby')">
 			<item level="0" text="Execution condition" description="The setting 'Without query' is the same as 'Standard' without additional confirmation query. All other dependencies (e.g. recordings, time range) persist." conditional="self.timerType.value == 'autodeepstandby'">self.timerActiveInStandby</item>
 			<item level="0" text="Sleep delay" description="Select the delay before the timer activates.">self.timerSleepDelay</item>
@@ -1334,20 +1334,20 @@
 		<item level="2" text="Unscramble receiving http streams" description="Enable to always unscramble received HTTP streams. Uses more resources due to demuxers. Streams with 0x100 in the service type are always unscrambled, regardless of this setting." indent="1">config.streaming.descramble_client</item>
 		<item level="2" text="Require authentication for http streams" description="When enabled, authentication is required to watch http streams." indent="1">config.streaming.authentication</item>
 		<item level="2" text="Http(s) stream start delay" description="Define additional delay in milliseconds before start of http(s) streams." indent="1">config.usage.http_startdelay</item>
-		<!--item level="2" text="Enable Startup Bootvideo" description="You can Enable or Disable the Startup Bootvideo.">config.misc.bootvideo</item-->
+		<!-- <item level="2" text="Enable Startup Bootvideo" description="You can Enable or Disable the Startup Bootvideo.">config.misc.bootvideo</item> -->
 		<item level="1" text="Startup And Wakeup" />
 		<item level="1" text="After power loss" description="Select what should be done when the %s %s was shut down incorrectly, or after power was lost." indent="1">config.usage.shutdownNOK_action</item>
 		<item level="1" text="Boot-up action" description="Select what should be done when the %s %s was boot-up, normal playing or goto Standby." indent="1">config.usage.boot_action</item>
 		<item level="2" text="Wake up time before a timer begins" description="Default wake-up is 5 minutes prior to timer start to wake up from Deep Standby. Adjust if the wake-up is too early or late, e.g., for network drives." indent="1">config.workaround.wakeuptime</item>
 		<item level="1" text="Use workaround for wake up from deep-standby" description="If enabled, a time window is used to detect wake-ups from Deep Standby triggered by a timer. The default setting is disabled, which uses a special signal from the receiver. However, some devices send an incorrect or no signal, causing wake-up detection to fail." indent="1">config.workaround.deeprecord</item>
 		<item level="2" text="Time window for detection of the wake up by a timer [mins]" description="The default settings are wake up time - 5 minutes and timer begin time + 5 minutes. This setting changed the time window before the wake up time. So can be detected a wake up by a timer even at very early starting receivers." requires="config.workaround.deeprecord" indent="1">config.workaround.wakeupwindow</item>
-		<!--item level="2" text="Remote control model shown" description="Which remote control gets shown. Only influences graphical representation.">config.usage.rc_model</item-->
+		<!-- <item level="2" text="Remote control model shown" description="Which remote control gets shown. Only influences graphical representation.">config.usage.rc_model</item> -->
 		<item level="2" text="Media Files And Navigation" />
 		<item level="2" text="Enable cut file support for non *.ts files" description="Enable cut file support for non *.ts files, e.g. mp4." indent="1">config.usage.useVideoCuesheet</item>
 		<item level="2" text="Enable cut file support for audio files" description="Enable cut file support for audio files, e.g. mp3." indent="1">config.usage.useAudioCuesheet</item>
 		<item level="2" text="Enable extended cut file support" description="Enable extended cut file support. This will write cut with more information and not only marker." indent="1">config.usage.nativeCuesheetSupport</item>
 		<item level="2" text="Enable chapter support for video files" description="Show chapter positions for supported video files." indent="1">config.usage.useChapterInfo</item>
-		<!--item level="2" text="Enable new GStreamer playback" description="If enabled, the new GStreamer playback engine will be used.">config.misc.usegstplaybin3</item-->
+		<!-- <item level="2" text="Enable new GStreamer playback" description="If enabled, the new GStreamer playback engine will be used.">config.misc.usegstplaybin3</item> -->
 	</setup>
 	<setup key="UserInterface" title="OSD Settings" showOpenWebif="yes">
 		<item level="0" text="Menus And Setup" />

@@ -18,7 +18,7 @@
 		<color color="#000000" name="WindowTitleBackground"/>
 	</windowstyle>
 	<fonts>
-		<!-- pick a funky name for the font, so we don't conflict  -->
+		<!-- pick a funky name for the font, so we don't conflict -->
 		<font filename="nmsbd.ttf" name="FdLcD" scale="90"/>
 		<font filename="verdana.ttf" name="FdLcDLight" scale="90"/>
 	</fonts>
@@ -30,7 +30,7 @@
 		</widget>
 	</screen>
 
-<!-- main-->
+<!-- main -->
 	<screen name="InfoBarSummary" position="0,0" size="720,576">
 		<widget source="session.CurrentService" render="Label" position="15,21" size="675,70" foregroundColor="#e5b243" font="FdLcD; 60" halign="center" zPosition="14">
 			<convert type="ServiceName">Name</convert>
@@ -68,7 +68,7 @@
 		</widget>
 	</screen>
 
-<!-- normal radiomodus-->
+<!-- normal radiomodus -->
 	<screen name="ChannelSelectionRadioSummary" position="0,0" size="720,576">
 		<widget source="parent.RdsDecoder" render="Label" position="15,20" foregroundColor="#e5b243" size="670,220" font="FdLcD;60" halign="center" valign="top">
 			<convert type="RdsInfo">RtpText</convert>
@@ -78,7 +78,7 @@
 		</widget>
 	</screen>
 
-<!-- channelselection-->
+<!-- channelselection -->
 	<screen name="ChannelSelectionSummary" position="0,0" size="720,576">
 		<widget source="parent.ServiceEvent" render="Label" position="15,21" size="675,70" foregroundColor="#e5b243" font="FdLcD; 60" halign="center">
 			<convert type="ServiceName">Name</convert>
@@ -123,7 +123,7 @@
 		<panel name="SummaryClockPanel" />
 	</screen>
 
-<!-- menus-->
+<!-- menus -->
 	<screen name="MenuSummary" position="0,0" size="720,576">
 		<widget source="Title" render="Label" position="15,20" foregroundColor="#e5b243" size="670,120" font="FdLcD;70" halign="center" valign="top" noWrap="1" />
 		<widget source="entry" render="Label" position="20,190" size="670,200" font="FdLcD;60" halign="center" valign="top"/>
@@ -137,7 +137,7 @@
 		<panel name="SummaryClockPanel" />
 	</screen>
 
-<!-- movieplayer-->
+<!-- movieplayer -->
 	<screen name="InfoBarMoviePlayerSummary" position="0,0" size="720,576">
 		<widget source="session.CurrentService" render="Label" position="15,21" size="675,244" foregroundColor="#e5b243" font="FdLcD; 60" valign="center" halign="center" zPosition="14">
 			<convert type="ServiceName">Name</convert>
@@ -176,7 +176,7 @@
 		<panel name="SummaryClockPanel" />
 	</screen>
 
-<!-- EMC-->
+<!-- EMC -->
 	<screen name="EMCSelectionSummary" position="0,0" size="720,576">
 		<widget source="parent.Service" render="Label" position="15,21" size="675,70" foregroundColor="#e5b243" font="FdLcD; 60" halign="center" zPosition="14">
 			<convert type="ServiceName">Name</convert>
@@ -243,7 +243,7 @@
 		<panel name="SummaryClockPanel" />
 	</screen>
 
-<!-- setup-->
+<!-- setup -->
 	<screen name="SetupSummary" position="0,0" size="720,576">
 		<widget source="Title" render="Label" position="10,20" foregroundColor="#e5b243" size="670,120" font="FdLcD;60" halign="center" valign="center" />
 		<widget source="entry" render="Label" position="22,154" size="670,200" font="FdLcD;60" halign="center" valign="top" />
@@ -251,7 +251,7 @@
 		<panel name="SummaryClockPanel" />
 	</screen>
 
-<!-- misc-->
+<!-- misc -->
 	<screen name="ScreenSummary" position="0,0" size="720,576">
 		<widget source="parent.Title" render="Label" position="20,190" size="670,200" font="FdLcD;60" halign="center" valign="top" />
 		<panel name="SummaryClockPanel" />
@@ -326,8 +326,8 @@
 
 <!-- Servicescan -->
 	<screen name="ServiceScanSummary" position="0,0" size="720,576">
-		<widget source="Title" render="Label" position="10,20" size="670,376" font="FdLcD;70" halign="center" valign="center"  />
-		<widget name="scan_progress"  position="27,400" size="660,25" foregroundColor="#02c6ff" borderWidth="2" />
+		<widget source="Title" render="Label" position="10,20" size="670,376" font="FdLcD;70" halign="center" valign="center" />
+		<widget name="scan_progress" position="27,400" size="660,25" foregroundColor="#02c6ff" borderWidth="2" />
 		<panel name="SummaryClockPanel" />
 	</screen>
 
@@ -417,5 +417,4 @@
 		</widget>
 		<panel name="SummaryClockPanel" />
 	</screen>
-
 </skin>

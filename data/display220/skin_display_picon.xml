@@ -16,10 +16,10 @@
 		<color color="#000000" name="WindowTitleBackground" />
 	</windowstyle>
 	<fonts>
-		<!-- pick a funky name for the font, so we don't conflict  -->
+		<!-- pick a funky name for the font, so we don't conflict -->
 		<font filename="nmsbd.ttf" name="FdLcD" scale="100" />
 	</fonts>
-	<!-- InfoBar Picon-->
+	<!-- InfoBar Picon -->
 	<screen name="InfoBarSummary" position="0,0" size="220,176">
 		<widget source="session.CurrentService" render="LcdPicon" zPosition="1" position="center,0" size="93,56" alphatest="blend">
 			<convert type="ServiceName">Reference</convert>
