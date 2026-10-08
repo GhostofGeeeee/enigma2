@@ -41,7 +41,7 @@ if [[ "$OSTYPE" == "darwin"* ]]
 	then
 		# Mac OSX
 		printf "Script running on Mac OSX [%s]\n" "$OSTYPE"
-    	findoptions=" -s -X "
+		findoptions=" -s -X "
 fi
 
 printf "Po files update/creation from script starting.\n"
