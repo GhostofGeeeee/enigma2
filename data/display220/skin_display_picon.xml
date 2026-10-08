@@ -2,22 +2,22 @@
 <skin>
 	<!-- Display skin: display220 / Picon / OpenATV -->
 	<windowstyle id="1" type="skinned">
-		<color color="#000000" name="Background" />
-		<color color="#ffffff" name="LabelForeground" />
-		<color color="#000000" name="ListboxBackground" />
-		<color color="#ffffff" name="ListboxForeground" />
-		<color color="#000000" name="ListboxSelectedBackground" />
-		<color color="#ffffff" name="ListboxSelectedForeground" />
-		<color color="#000000" name="ListboxMarkedBackground" />
-		<color color="#ffffff" name="ListboxMarkedForeground" />
-		<color color="#000000" name="ListboxMarkedAndSelectedBackground" />
-		<color color="#ffffff" name="ListboxMarkedAndSelectedForeground" />
-		<color color="#ffffff" name="WindowTitleForeground" />
-		<color color="#000000" name="WindowTitleBackground" />
+		<color color="#000000" name="Background"/>
+		<color color="#ffffff" name="LabelForeground"/>
+		<color color="#000000" name="ListboxBackground"/>
+		<color color="#ffffff" name="ListboxForeground"/>
+		<color color="#000000" name="ListboxSelectedBackground"/>
+		<color color="#ffffff" name="ListboxSelectedForeground"/>
+		<color color="#000000" name="ListboxMarkedBackground"/>
+		<color color="#ffffff" name="ListboxMarkedForeground"/>
+		<color color="#000000" name="ListboxMarkedAndSelectedBackground"/>
+		<color color="#ffffff" name="ListboxMarkedAndSelectedForeground"/>
+		<color color="#ffffff" name="WindowTitleForeground"/>
+		<color color="#000000" name="WindowTitleBackground"/>
 	</windowstyle>
 	<fonts>
 		<!-- pick a funky name for the font, so we don't conflict -->
-		<font filename="nmsbd.ttf" name="FdLcD" scale="100" />
+		<font filename="nmsbd.ttf" name="FdLcD" scale="100"/>
 	</fonts>
 	<!-- InfoBar Picon -->
 	<screen name="InfoBarSummary" position="0,0" size="220,176">
@@ -40,11 +40,11 @@
 		</widget>
 		<widget source="session.RecordState" render="FixedLabel" text="Record" halign="center" position="120,151" foregroundColor="#ff0000" size="100,25" font="FdLcD;20" zPosition="1" noWrap="1">
 			<convert type="ConfigEntryTest">config.usage.blinking_rec_symbol_during_recording,False,CheckSourceBoolean</convert>
-			<convert type="ConditionalShowHide" />
+			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="10,150" size="76,25" font="FdLcD;25" halign="left" valign="center" noWrap="1" zPosition="5">
-			<convert type="ClockToText" />
+			<convert type="ClockToText"/>
 		</widget>
 	</screen>
-	<include filename="/usr/share/enigma2/display/skin_display_templates.xml" />
+	<include filename="/usr/share/enigma2/display/skin_display_templates.xml"/>
 </skin>

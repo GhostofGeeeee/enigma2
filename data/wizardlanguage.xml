@@ -1,6 +1,6 @@
 <wizard>
 	<step id="start">
-		<config screen="LocaleWizard" module="LocaleSelection" type="standalone" />
+		<config screen="LocaleWizard" module="LocaleSelection" type="standalone"/>
 	</step>
 	<step id="end">
 		<code>

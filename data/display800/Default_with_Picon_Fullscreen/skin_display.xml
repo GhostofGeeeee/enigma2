@@ -21,21 +21,21 @@
 	</fonts>
 
 	<colors>
-		<color name="transparent" value="#ffffffff" />
-		<color name="red" value="#00f50808" />
-		<color name="green" value="#0004c81b" />
-		<color name="yellow" value="#00edf506" />
-		<color name="blue" value="#00077cf5" />
-		<color name="white" value="#00ffffff" />
-		<color name="black" value="#00000000" />
-		<color name="grey" value="#00b3b3b3" />
+		<color name="transparent" value="#ffffffff"/>
+		<color name="red" value="#00f50808"/>
+		<color name="green" value="#0004c81b"/>
+		<color name="yellow" value="#00edf506"/>
+		<color name="blue" value="#00077cf5"/>
+		<color name="white" value="#00ffffff"/>
+		<color name="black" value="#00000000"/>
+		<color name="grey" value="#00b3b3b3"/>
 	</colors>
 
 	<!-- MAIN -->
 
 	<!-- CHANNEL SELECTION -->
 	<screen name="ChannelSelectionSummary" position="0,0" size="800,480">
-		<panel name="LCDFullChannelSelectionPicon" />
+		<panel name="LCDFullChannelSelectionPicon"/>
 	</screen>
 	<screen name="ChannelSelectionRadioSummary" position="0,0" size="800,480">
 		<widget source="parent.RdsDecoder" render="Label" position="40,200" size="720,150" foregroundColor="white" font="FdLcDLight;65" halign="center" valign="center" zPosition="2">
@@ -45,21 +45,21 @@
 
 	<!-- EPG -->
 	<screen name="GraphicalEPGPIGSummary" position="0,0" size="800,480">
-		<panel name="LCDFullEPGPicon" />
+		<panel name="LCDFullEPGPicon"/>
 	</screen>
 	<screen name="GraphicalEPGSummary" position="0,0" size="800,480">
-		<panel name="GraphicalEPGPIGSummary" />
+		<panel name="GraphicalEPGPIGSummary"/>
 	</screen>
 	<screen name="GraphicalInfoBarEPGSummary" position="0,0" size="800,480">
-		<panel name="GraphicalEPGPIGSummary" />
+		<panel name="GraphicalEPGPIGSummary"/>
 	</screen>
 	<screen name="EPGSelectionMultiSummary" position="0,0" size="800,480">
-		<panel name="GraphicalEPGPIGSummary" />
+		<panel name="GraphicalEPGPIGSummary"/>
 	</screen>
 
 	<!-- INFOBAR -->
 	<screen name="InfoBarSummary" position="0,0" size="800,480">
-		<panel name="LCDFullPicon" />
+		<panel name="LCDFullPicon"/>
 	</screen>
 
 	<!-- STANDBY -->

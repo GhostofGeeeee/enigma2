@@ -152,7 +152,7 @@
 	<screen name="MediaPlayerLCDScreen" position="0,0" size="480,320">
 		<widget name="text1" position="0,10" size="480,46" font="FdLcD;40" noWrap="1" halign="center" valign="center"/>
 		<widget name="text3" position="0,66" size="480,46" font="FdLcD;40" noWrap="1" halign="center" valign="center"/>
-		<widget name="text4" position="0,122" size="480,46" font="FdLcD;40" noWrap="1" halign="center" valign="center" />
+		<widget name="text4" position="0,122" size="480,46" font="FdLcD;40" noWrap="1" halign="center" valign="center"/>
 		<eLabel position="20,180" size="440,3" backgroundColor="#BDBDBD"/>
 		<widget source="session.CurrentService" render="Progress" position="20,186" size="440,33" foregroundColor="#888888">
 			<convert type="ServicePosition">Position</convert>
@@ -317,7 +317,7 @@
 	<screen name="SwapSummary" position="0,0" size="480,320">
 		<widget source="parent.Title" render="Label" position="0,40" size="480,55" font="FdLcD;48" halign="center"/>
 		<eLabel position="10,110" size="460,3" backgroundColor="#BDBDBD"/>
-		<widget source="parent.swapname_summary" render="Label" position="0,63" size="480,55" font="FdLcD;48" foregroundColor="#87CEFA" halign="center" />
+		<widget source="parent.swapname_summary" render="Label" position="0,63" size="480,55" font="FdLcD;48" foregroundColor="#87CEFA" halign="center"/>
 		<eLabel position="10,124" size="460,3" backgroundColor="#BDBDBD"/>
 		<widget source="parent.swapactive_summary" render="Label" position="0,125" size="480,192" font="FdLcD;42" valign="center" halign="center"/>
 	</screen>

@@ -22,29 +22,29 @@
 	</fonts>
 
 	<colors>
-		<color name="transparent" value="#ffffffff" />
-		<color name="red" value="#00f50808" />
-		<color name="green" value="#0004c81b" />
-		<color name="yellow" value="#00edf506" />
-		<color name="blue" value="#00077cf5" />
-		<color name="white" value="#00ffffff" />
-		<color name="black" value="#00000000" />
-		<color name="grey" value="#00b3b3b3" />
+		<color name="transparent" value="#ffffffff"/>
+		<color name="red" value="#00f50808"/>
+		<color name="green" value="#0004c81b"/>
+		<color name="yellow" value="#00edf506"/>
+		<color name="blue" value="#00077cf5"/>
+		<color name="white" value="#00ffffff"/>
+		<color name="black" value="#00000000"/>
+		<color name="grey" value="#00b3b3b3"/>
 	</colors>
 
 	<!-- MAIN -->
 
 	<!-- CHANNEL SELECTION -->
 	<screen name="ChannelSelectionSummary" position="0,0" size="800,480">
-		<panel name="LCDPiconChannelSelectionProgramName" />
-		<panel name="LCDPiconChannelSelectionProgress" />
-		<panel name="LCDPiconChannelSelectionRemainingTime" />
-		<panel name="LCDChannelSelectionPicon" />
-		<panel name="LCDPiconStatusIcons" />
-		<panel name="LCDRecordIcon" />
-		<panel name="LCDPiconChannelSelectionStartTime" />
-		<eLabel text="-" position="520,390" size="70,70" foregroundColor="white" font="FdLcD;60" halign="center" valign="center" />
-		<panel name="LCDPiconChannelSelectionEndTime" />
+		<panel name="LCDPiconChannelSelectionProgramName"/>
+		<panel name="LCDPiconChannelSelectionProgress"/>
+		<panel name="LCDPiconChannelSelectionRemainingTime"/>
+		<panel name="LCDChannelSelectionPicon"/>
+		<panel name="LCDPiconStatusIcons"/>
+		<panel name="LCDRecordIcon"/>
+		<panel name="LCDPiconChannelSelectionStartTime"/>
+		<eLabel text="-" position="520,390" size="70,70" foregroundColor="white" font="FdLcD;60" halign="center" valign="center"/>
+		<panel name="LCDPiconChannelSelectionEndTime"/>
 	</screen>
 	<screen name="ChannelSelectionRadioSummary" position="0,0" size="800,480">
 		<widget source="parent.RdsDecoder" render="Label" position="40,200" size="720,150" foregroundColor="white" font="FdLcDLight;65" halign="center" valign="center" zPosition="2">
@@ -54,42 +54,42 @@
 
 	<!-- EPG -->
 	<screen name="GraphicalEPGPIGSummary" position="0,0" size="800,480">
-		<panel name="LCDPiconEPGProgramName" />
-		<panel name="LCDPiconEPGProgress" />
-		<panel name="LCDPiconEPGRemainingTime" />
-		<panel name="LCDEPGPicon" />
-		<panel name="LCDPiconStatusIcons" />
-		<panel name="LCDRecordIcon" />
-		<panel name="LCDPiconEPGStartTime" />
-		<eLabel text="-" position="520,390" size="70,70" foregroundColor="white" font="FdLcD;60" halign="center" valign="center" />
-		<panel name="LCDPiconEPGSEndTime" />
+		<panel name="LCDPiconEPGProgramName"/>
+		<panel name="LCDPiconEPGProgress"/>
+		<panel name="LCDPiconEPGRemainingTime"/>
+		<panel name="LCDEPGPicon"/>
+		<panel name="LCDPiconStatusIcons"/>
+		<panel name="LCDRecordIcon"/>
+		<panel name="LCDPiconEPGStartTime"/>
+		<eLabel text="-" position="520,390" size="70,70" foregroundColor="white" font="FdLcD;60" halign="center" valign="center"/>
+		<panel name="LCDPiconEPGSEndTime"/>
 	</screen>
 	<screen name="GraphicalEPGSummary" position="0,0" size="800,480">
-		<panel name="GraphicalEPGPIGSummary" />
+		<panel name="GraphicalEPGPIGSummary"/>
 	</screen>
 	<screen name="GraphicalInfoBarEPGSummary" position="0,0" size="800,480">
-		<panel name="GraphicalEPGPIGSummary" />
+		<panel name="GraphicalEPGPIGSummary"/>
 	</screen>
 	<screen name="EPGSelectionMultiSummary" position="0,0" size="800,480">
-		<panel name="GraphicalEPGPIGSummary" />
+		<panel name="GraphicalEPGPIGSummary"/>
 	</screen>
 
 	<!-- INFOBAR -->
 	<screen name="InfoBarSummary" position="0,0" size="800,480">
-		<panel name="LCDPiconInfoBarProgramName" />
-		<panel name="LCDPiconInfoBarProgress" />
-		<panel name="LCDPiconInfoBarRemainingTime" />
-		<panel name="LCDPicon" />
-		<panel name="LCDPiconStatusIcons" />
-		<panel name="LCDRecordIcon" />
-		<panel name="LCDPiconInfoBarStartTime" />
-		<eLabel text="-" position="520,390" size="70,70" foregroundColor="white" font="FdLcD;60" halign="center" valign="center" />
-		<panel name="LCDPiconInfoBarEndTime" />
+		<panel name="LCDPiconInfoBarProgramName"/>
+		<panel name="LCDPiconInfoBarProgress"/>
+		<panel name="LCDPiconInfoBarRemainingTime"/>
+		<panel name="LCDPicon"/>
+		<panel name="LCDPiconStatusIcons"/>
+		<panel name="LCDRecordIcon"/>
+		<panel name="LCDPiconInfoBarStartTime"/>
+		<eLabel text="-" position="520,390" size="70,70" foregroundColor="white" font="FdLcD;60" halign="center" valign="center"/>
+		<panel name="LCDPiconInfoBarEndTime"/>
 	</screen>
 
 	<!-- STANDBY -->
 	<screen name="StandbySummary" position="0,0" size="800,480">
-		<panel name="AnalogueClock" />
+		<panel name="AnalogueClock"/>
 		<widget source="global.CurrentTime" render="Label" position="470,24" foregroundColor="white" size="300,50" font="FdLcD;45" halign="right">
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
@@ -101,7 +101,7 @@
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 		<widget source="session.RecordState" render="Pixmap" pixmap="record.png" position="40,20" size="70,70" >
-			<convert type="ConditionalShowHide" />
+			<convert type="ConditionalShowHide"/>
 		</widget>
 		<!--
 		<widget source="global.CurrentTime" render="Label" position="40,70" size="720,180" foregroundColor="white" font="FdLcD;100" halign="center" valign="center" zPosition="10">
